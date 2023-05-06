@@ -1,6 +1,5 @@
 package com.dsa.project.gameobject;
 
-import com.gamestudio.effect.CacheDataLoader;
 
 import javax.swing.*;
 import java.awt.*;
