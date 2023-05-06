@@ -17,6 +17,7 @@ public class GameFrame extends JFrame{
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         Toolkit toolkit = this.getToolkit();
         Dimension solution = toolkit.getScreenSize();
+        this.setBounds((solution.width -SCREEN_WIDTH)/2, (solution.height -SCREEN_HEIGHT)/2, SCREEN_WIDTH, SCREEN_HEIGHT);
 
 
     }
