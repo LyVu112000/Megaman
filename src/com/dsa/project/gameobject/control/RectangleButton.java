@@ -1,6 +1,5 @@
-package com.gamestudio.control;
+package com.dsa.project.gameobject.control;
 
-import com.gamestudio.control.Button;
 import java.awt.Color;
 import java.awt.Font;
 import java.awt.Graphics;

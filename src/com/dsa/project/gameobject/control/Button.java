@@ -1,4 +1,4 @@
-package com.gamestudio.control;
+package com.dsa.project.gameobject.control;
 
 import java.awt.Color;
 import java.awt.Graphics;
