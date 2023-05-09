@@ -1,14 +1,8 @@
+package com.dsa.project.gameobject;
 
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-package com.gamestudio.gameobject;
+import com.dsa.project.effect.CacheDataLoader;
+import com.dsa.project.userinterface.GameFrame;
 
-import com.gamestudio.state.GameWorldState;
-import com.gamestudio.effect.CacheDataLoader;
-import com.gamestudio.userinterface.GameFrame;
 import java.awt.Color;
 import java.awt.Graphics2D;
 
@@ -29,7 +23,7 @@ public class BackgroundMap extends GameObject {
     
     public void draw(Graphics2D g2){
         
-        Camera camera = getGameWorld().camera;
+        com.gamestudio.gameobject.Camera camera = getGameWorld().camera;
         
         g2.setColor(Color.RED);
         for(int i = 0;i< map.length;i++)

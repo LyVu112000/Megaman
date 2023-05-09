@@ -1,4 +1,4 @@
-package com.dsa.project.gameobject.control;
+package com.dsa.project.control;
 
 import java.awt.Color;
 import java.awt.Graphics;
