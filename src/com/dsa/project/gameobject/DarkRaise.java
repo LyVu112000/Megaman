@@ -2,6 +2,10 @@ package com.dsa.project.gameobject;
 
 
 import com.dsa.project.effect.Animation;
+import com.dsa.project.effect.CacheDataLoader;
+import com.dsa.project.state.GameWorldState;
+
+import java.awt.*;
 
 public class DarkRaise extends ParticularObject{
 
@@ -43,7 +47,7 @@ public class DarkRaise extends ParticularObject{
         
         
         Bullet bullet = new DarkRaiseBullet(getPosX(), getPosY(), getGameWorld());
-        
+
         if(deltaX < 0)
             bullet.setSpeedX(-speedX);
         else bullet.setSpeedX(speedX);

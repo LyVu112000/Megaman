@@ -1,6 +1,8 @@
 package com.dsa.project.gameobject;
 
 
+import com.dsa.project.state.GameWorldState;
+
 public class BulletManager extends ParticularObjectManager {
 
     public BulletManager(GameWorldState gameWorld) {

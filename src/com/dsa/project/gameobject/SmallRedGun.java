@@ -3,6 +3,7 @@ package com.dsa.project.gameobject;
 
 import com.dsa.project.effect.Animation;
 import com.dsa.project.effect.CacheDataLoader;
+import com.dsa.project.state.GameWorldState;
 
 import java.awt.*;
 

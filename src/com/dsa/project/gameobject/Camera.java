@@ -1,5 +1,7 @@
 package com.dsa.project.gameobject;
 
+import com.dsa.project.state.GameWorldState;
+
 public class Camera extends GameObject {
 
     private float widthView;
