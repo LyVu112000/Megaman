@@ -1,6 +1,7 @@
 package com.dsa.project.gameobject;
 
 import com.dsa.project.effect.CacheDataLoader;
+import com.dsa.project.state.GameWorldState;
 import com.dsa.project.userinterface.GameFrame;
 
 import java.awt.Color;
@@ -23,7 +24,7 @@ public class BackgroundMap extends GameObject {
     
     public void draw(Graphics2D g2){
         
-        com.gamestudio.gameobject.Camera camera = getGameWorld().camera;
+        Camera camera = getGameWorld().camera;
         
         g2.setColor(Color.RED);
         for(int i = 0;i< map.length;i++)

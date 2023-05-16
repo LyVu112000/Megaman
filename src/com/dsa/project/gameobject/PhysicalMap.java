@@ -2,6 +2,7 @@ package com.dsa.project.gameobject;
 
 
 import com.dsa.project.effect.CacheDataLoader;
+import com.dsa.project.state.GameWorldState;
 
 import java.awt.Color;
 import java.awt.Graphics2D;
