@@ -1,12 +1,13 @@
-package com.gamestudio.gameobject;
+package com.dsa.project.gameobject;
 
-import com.gamestudio.state.GameWorldState;
-import com.gamestudio.effect.Animation;
-import com.gamestudio.effect.CacheDataLoader;
+import com.dsa.project.effect.Animation;
+import com.dsa.project.effect.CacheDataLoader;
+import com.dsa.project.state.GameWorldState;
+
 import java.awt.Graphics2D;
 import java.awt.Rectangle;
 
-public class BlueFire extends Bullet{
+public class BlueFire extends Bullet {
 	
     private Animation forwardBulletAnim, backBulletAnim;
     
