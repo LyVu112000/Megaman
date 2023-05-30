@@ -1,23 +1,34 @@
 package com.dsa.project.userinterface;
 
 
+
+import com.dsa.project.state.GameWorldState;
 import com.dsa.project.state.State;
 
-import javax.swing.*;
-import java.awt.*;
+import java.awt.Color;
+import java.awt.Graphics;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
+
+import javax.swing.JPanel;
 
 public class GamePanel extends JPanel implements Runnable, KeyListener{
 
     State gameState;
-    Thread gameThread;
+
     InputManager inputManager;
+
+    Thread gameThread;
+
     public boolean isRunning = true;
 
     public GamePanel(){
 
+        //gameState = new MenuState(this);
+        gameState = new GameWorldState(this);
+
         inputManager = new InputManager(gameState);
+
     }
 
     public void startGame(){
@@ -36,6 +47,9 @@ public class GamePanel extends JPanel implements Runnable, KeyListener{
 
         while(isRunning){
 
+            gameState.Update();
+            gameState.Render();
+
 
             repaint();
 
@@ -43,9 +57,9 @@ public class GamePanel extends JPanel implements Runnable, KeyListener{
             sleepTime = period - (currentTime - previousTime);
             try{
 
-                    if(sleepTime > 0)
-                            Thread.sleep(sleepTime/1000000);
-                    else Thread.sleep(period/2000000);
+                if(sleepTime > 0)
+                    Thread.sleep(sleepTime/1000000);
+                else Thread.sleep(period/2000000);
 
             }catch(Exception e){}
 
@@ -60,19 +74,22 @@ public class GamePanel extends JPanel implements Runnable, KeyListener{
 
     }
 
-
     @Override
-    public void keyTyped(KeyEvent e) {
-
-    }
+    public void keyTyped(KeyEvent e) {}
 
     @Override
     public void keyPressed(KeyEvent e) {
-
+        inputManager.setPressedButton(e.getKeyCode());
     }
 
     @Override
     public void keyReleased(KeyEvent e) {
-
+        inputManager.setReleasedButton(e.getKeyCode());
     }
+
+    public void setState(State state) {
+        gameState = state;
+        inputManager.setState(state);
+    }
+
 }

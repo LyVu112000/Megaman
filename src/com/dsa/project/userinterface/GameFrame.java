@@ -3,9 +3,11 @@ package com.dsa.project.userinterface;
 
 import com.dsa.project.effect.CacheDataLoader;
 
-import javax.swing.*;
-import java.awt.*;
+import java.awt.Dimension;
+import java.awt.Toolkit;
 import java.io.IOException;
+
+import javax.swing.JFrame;
 
 public class GameFrame extends JFrame{
 
@@ -30,21 +32,23 @@ public class GameFrame extends JFrame{
         this.setBounds((solution.width - SCREEN_WIDTH)/2, (solution.height - SCREEN_HEIGHT)/2, SCREEN_WIDTH, SCREEN_HEIGHT);
 
         gamePanel = new GamePanel();
+        addKeyListener(gamePanel);
+        add(gamePanel);
 
     }
 
     public void startGame(){
 
-            gamePanel.startGame();
-            this.setVisible(true);
+        gamePanel.startGame();
+        this.setVisible(true);
 
     }
 
     public static void main(String arg[]){
 
-            GameFrame gameFrame = new GameFrame();
-            gameFrame.startGame();
+        GameFrame gameFrame = new GameFrame();
+        gameFrame.startGame();
 
     }
-        
+
 }
